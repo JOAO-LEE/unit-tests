@@ -21,5 +21,5 @@ const average = (arrayOfNumbers) => {
   }   
   return Math.round(guardaSoma / arrayOfNumbers.length);
   };
-//Source Math.round https://www.w3schools.com/jsref/jsref_round.asp
+  //Source Math.round https://www.w3schools.com/jsref/jsref_round.asp
 module.exports = average;
