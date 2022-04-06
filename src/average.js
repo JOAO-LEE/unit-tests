@@ -12,6 +12,14 @@
     - average([1, '2']) // Retorno: undefined;
 */
 
-const average = () => {};
-
+const average = (arrayOfNumbers) => {
+  let guardaSoma = 0;
+  if (!arrayOfNumbers.length) return undefined;
+  for (let index of arrayOfNumbers) {
+      if (typeof index !== 'number') return undefined;
+      guardaSoma += index;
+  }   
+  return Math.round(guardaSoma / arrayOfNumbers.length);
+  };
+//Source Math.round https://www.w3schools.com/jsref/jsref_round.asp
 module.exports = average;
