@@ -45,4 +45,5 @@ describe('6 - Implemente os casos de teste para a função `productDetails`', ()
     expect((productDetails('Sabão', 'Detergente')[1].details.productId).endsWith('123')).toBeTruthy()
 })
 });
-// Source - .toBeInstanceOf method https://jestjs.io/pt-BR/docs/expect#tobeinstanceofclass
+// Source - .toBeInstanceOf() method https://jestjs.io/pt-BR/docs/expect#tobeinstanceofclass
+// Source - endsWith() method https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/endsWith
