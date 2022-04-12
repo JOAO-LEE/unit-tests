@@ -25,14 +25,24 @@ const circle = require('../src/circle');
 
 describe('4 - Implemente os casos de teste para a função `circle`', () => {
   it('Verifica se ao receber um raio, a função `circle` retorna um objeto contedos os valores esperados', () => {
-    fail('Teste vazio!');
+    // fail('Teste vazio!');
     // ESCREVA SEUS TESTES ABAIXO:
     // Teste se circle retorna undefined, caso o parâmetro passado não seja um número.
+    expect(circle('Abx')).toBeUndefined()
     // Teste se circle retorna um objeto.
+    expect(circle(4)).toBeInstanceOf(Object)
     // Teste se o objeto retornado tem 3 propriedades.
+    expect(Object.keys(circle(5))).toHaveLength(3)
     // Teste se a função, quando não recebe nenhum parâmetro, retorna undefined.
+    expect(circle()).toBeUndefined()
     // Teste se dentro do objeto retornado, a função retorna uma key com value igual a circunferência correta para um círculo de raio 2.
+    expect(circle(2).circumference).toStrictEqual(12.56)
     // Teste se dentro do objeto retornado, a função retorna uma key com value igual a área correta para um círculo de raio 3.
+    expect(circle(3).area).toStrictEqual(28.259999999999998)
     // Teste que a função retorna, num objeto, os dados corretos de um círculo de raio 3.
+    expect(circle(3)).toHaveProperty('radius', 3)
+    expect(circle(3)).toHaveProperty('area', 28.259999999999998)
+    expect(circle(3)).toHaveProperty('circumference', 18.84) 
   });
 });
+//Source .toStrictEqual method https://jestjs.io/pt-BR/docs/expect#tohavelengthnumber
