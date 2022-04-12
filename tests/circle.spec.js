@@ -45,4 +45,4 @@ describe('4 - Implemente os casos de teste para a função `circle`', () => {
     expect(circle(3)).toHaveProperty('circumference', 18.84) 
   });
 });
-//Source .toStrictEqual method https://jestjs.io/pt-BR/docs/expect#tohavelengthnumber
+//Source - .toStrictEqual method https://jestjs.io/pt-BR/docs/expect#tohavelengthnumber

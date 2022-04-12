@@ -19,6 +19,7 @@ const average = (arrayOfNumbers) => {
       if (typeof index !== 'number') return undefined;
       guardaSoma += index;
   }   
+  
   return Math.round(guardaSoma / arrayOfNumbers.length);
   };
   // Source Math.round https://www.w3schools.com/jsref/jsref_round.asp

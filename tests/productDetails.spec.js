@@ -28,13 +28,21 @@ const productDetails = require('../src/productDetails');
 
 describe('6 - Implemente os casos de teste para a função `productDetails`', () => {
   it('Verifica se a função `productDetails` tem o comportamento esperado', () => {
-    fail('Teste vazio!');
+    // fail('Teste vazio!');
     // ESCREVA SEUS TESTES ABAIXO:
     // Teste se productDetails é uma função.
+    expect(productDetails).toBeInstanceOf(Function);
     // Teste se o retorno da função é um array.
-    // Teste se o array retornado pela função contém dois itens dentro.
-    // Teste se os dois itens dentro do array retornado pela função são objetos.
+    expect(productDetails('Sabonete', 'Hidratante')).toBeInstanceOf(Array);
+    // // Teste se o array retornado pela função contém dois itens dentro.
+    expect(productDetails('Sabão', 'Detergente')).toHaveLength(2);
+    // // Teste se os dois itens dentro do array retornado pela função são objetos.
+    expect(productDetails('Cloro', 'Sapólio')).toBeInstanceOf(Object);
     // Teste se quando passado parâmetros diferentes entre si, os dois objetos também são diferentes entre si.
+    expect(productDetails('Desinfetante', 'Alvejante')[0]).not.toEqual(productDetails('Desinfetante', 'Alvejante')[1]);
     // Teste se os dois productIds terminam com 123.
-  });
+    expect((productDetails('Sabão', 'Detergente')[0].details.productId).endsWith('123')).toBeTruthy()
+    expect((productDetails('Sabão', 'Detergente')[1].details.productId).endsWith('123')).toBeTruthy()
+})
 });
+// Source - .toBeInstanceOf method https://jestjs.io/pt-BR/docs/expect#tobeinstanceofclass
