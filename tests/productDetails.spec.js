@@ -41,8 +41,8 @@ describe('6 - Implemente os casos de teste para a função `productDetails`', ()
     // Teste se quando passado parâmetros diferentes entre si, os dois objetos também são diferentes entre si.
     expect(productDetails('Desinfetante', 'Alvejante')[0]).not.toEqual(productDetails('Desinfetante', 'Alvejante')[1]);
     // Teste se os dois productIds terminam com 123.
-    expect((productDetails('Sabão', 'Detergente')[0].details.productId).endsWith('123')).toBeTruthy()
-    expect((productDetails('Sabão', 'Detergente')[1].details.productId).endsWith('123')).toBeTruthy()
+    expect((productDetails('Sabão', 'Detergente')[0].details.productId).endsWith('123')).toBeTruthy();
+    expect((productDetails('Sabão', 'Detergente')[1].details.productId).endsWith('123')).toBeTruthy();
 })
 });
 // Source - .toBeInstanceOf() method https://jestjs.io/pt-BR/docs/expect#tobeinstanceofclass
